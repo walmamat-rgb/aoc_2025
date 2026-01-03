@@ -3,7 +3,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 library work;
-use work.top.all;
+use work.top_pkg.all;
+use work.day_1_solution_pkg.all;
 
 entity day_1_solution is
   generic (
@@ -17,7 +18,7 @@ entity day_1_solution is
     last_i     : in  std_logic;     -- indicates this is the last rotate in the sequence
     keep_i     : in  std_logic_vector(0 to G_NUM_INPUT_ROTATES - 1); -- indicates which rotates are valid on this beat
     input_i    : in  input_array_t(0 to G_NUM_INPUT_ROTATES - 1);
-    output_o   : out integer range 0 to G_NUM_INPUT_ROTATES*G_MAX_NUM_INPUT_BEATS - 1 -- number of times the dial lands on 0
+    output_o   : out integer range 0 to (G_NUM_INPUT_ROTATES*G_MAX_NUM_INPUT_BEATS)-1 -- number of times the dial lands on 0
   );
 end entity day_1_solution;
 
