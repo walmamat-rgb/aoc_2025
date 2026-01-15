@@ -116,13 +116,14 @@ begin
           if diff_v >= 0 then
             input_record_array_r(stage_index).rotate(input_index).rotate_amount <= diff_v;
           else
-              diff_v := input_record_array_x(stage_index).rotate(input_index).rotate_amount;
-              input_record_array_r(stage_index).rotate(input_index).rotate_amount <= diff_v;
+            diff_v := input_record_array_x(stage_index).rotate(input_index).rotate_amount;
+            input_record_array_r(stage_index).rotate(input_index).rotate_amount <= diff_v;
           end if;
         end loop;
       end process;
     end generate gen_no_reg;
   end generate gen_stages;
+
 
   -- convert L rotations to R rotations
   process(all)
