@@ -4,6 +4,17 @@ This directory implements the solution to Advent of Code 2025 day 1, part A.
 
 That turned out to be time consuming enough, so I didn't attempt part B.  As an aside, it turns out that the solution to Part B would require reversing some of the optimizations I made for Part A.
 
+To compile and run use from modelsim or questasim:
+
+do build.do
+do sim.do
+
+Modify sim.do to change which top level to use.  There were a few different ones to test different parts of the design.
+
+tb_file_input.vhd - inputs the challenge file, outputs the result
+tb_top.vhd - runs a randomized test and compares against the model
+tb_top_modulo.vhd - tests first stage of solution
+
 # Parameters
 ## C_ROTATE_MODULO - in fpga_top.vhd
 Defines the modulo amount, in the problem statement this is 100.
