@@ -7,6 +7,7 @@ That turned out to be time consuming enough, so I didn't attempt part B.  As an 
 To compile and run use from modelsim or questasim:
 
 do build.do
+
 do sim.do
 
 Modify sim.do to change which top level to use.  There were a few different ones to test different parts of the design.
